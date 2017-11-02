@@ -14,6 +14,10 @@ when 'debian'
     components ['main']
     action :add
   end
+
+  dpkg_autostart 'grafana-server' do
+    allow false
+  end
 when 'rhel'
   yum_repository 'grafana' do
     description "Grafana - #{node['chef-grafana']['install']['channel']}"
@@ -32,5 +36,5 @@ package 'grafana' do
 end
 
 service 'grafana-server' do
-  action [:enable, :start]
+  action :enable
 end

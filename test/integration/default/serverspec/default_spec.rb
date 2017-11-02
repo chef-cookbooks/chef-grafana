@@ -24,4 +24,9 @@ describe 'chef-grafana::default' do
     it { should be_mode 644 }
     it { should contain '# Managed by Chef' }
   end
+
+  # check if non-default admin password is set
+  describe command('curl -I http://localhost:3000/api/datasources -H "Authorization: Basic YWRtaW46bm9uLWRlZmF1bHQ="') do
+    its(:stdout) { should match '200 OK' }
+  end
 end

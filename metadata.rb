@@ -12,6 +12,7 @@ version '0.4.0'
 end
 
 depends 'apt'
+depends 'dpkg_autostart'
 depends 'yum'
 
 source_url 'https://github.com/chef-cookbooks/chef-grafana'
