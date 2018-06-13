@@ -100,6 +100,18 @@ default['chef-grafana']['config']['paths']['logs'] = '/var/log/grafana'
 # default['chef-grafana']['config']['auth.google']['allowed_domains'] = \
 #  "mycompany.com othercompany.com"
 
+# smtp
+# default['chef-grafana']['config']['smtp']['enabled'] = "false"
+# default['chef-grafana']['config']['smtp']['host'] = "localhost:25"
+# default['chef-grafana']['config']['smtp']['user'] = ""
+# default['chef-grafana']['config']['smtp']['password'] = ""
+# default['chef-grafana']['config']['smtp']['cert_file'] = ""
+# default['chef-grafana']['config']['smtp']['key_file'] = ""
+# default['chef-grafana']['config']['smtp']['skip_verify'] = "false"
+# default['chef-grafana']['config']['smtp']['from_address'] = "admin@grafana.localhost"
+# default['chef-grafana']['config']['smtp']['from_name'] = "Grafana"
+# default['chef-grafana']['config']['smtp']['ehlo_identity'] = "instance_name"
+
 # log
 # default['chef-grafana']['config']['log']['mode'] = "console, file"
 # default['chef-grafana']['config']['log']['buffer_len'] = "10000"
