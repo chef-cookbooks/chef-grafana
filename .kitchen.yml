@@ -18,3 +18,7 @@ suites:
     run_list:
       - recipe[chef-grafana::default]
     attributes:
+      chef-grafana:
+        config:
+          security:
+            admin_password: "non-default"
